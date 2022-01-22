@@ -1,0 +1,41 @@
+.form__container {
+	background: linear-gradient(white 50%, var(--bg-light) 50%);
+	background-size: cover;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	.form {
+		display: flex;
+		border-radius: var(--radii-sm);
+		padding: 2.5rem 2rem;
+		background-image: url(../../../images/bg-shorten-desktop.svg);
+		background-color: var(--primary-600);
+		background-size: cover;
+		background-repeat: no-repeat;
+		grid-gap: 1rem;
+		gap: 1rem;
+
+		input {
+			flex-grow: 1;
+			line-height: 2.5;
+			padding: 0.5rem 1.5rem;
+			border-radius: var(--radii-sm);
+			width: 100%;
+			border: none;
+			font-size: 1.25rem;
+			@media (max-width: 1024px) {
+				padding: 0.5rem 0;
+				line-height: 0;
+			}
+		}
+		button {
+			width: 25%;
+			@media (max-width: 1024px) {
+				width: 100%;
+				line-height: 2.5;
+			}
+		}
+		@media (max-width: 767px) {
+			flex-direction: column;
+		}
+	}
+}

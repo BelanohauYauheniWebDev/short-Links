@@ -1,0 +1,32 @@
+.header_container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2rem !important;
+	margin-bottom: 3rem;
+
+	position: relative;
+}
+.burger {
+	margin-left: auto;
+	font-size: 1.75rem;
+	color: var(--gray-300);
+	cursor: pointer;
+}
+.mobileMenu {
+	position: absolute;
+	width: 100%;
+	max-width: 320px;
+	left: 50%;
+	top: 100%;
+	transform: translate(-50%);
+	overflow: hidden;
+
+	background-color: var(--primary-600);
+	border-radius: var(--radii);
+	padding: 1.25rem;
+
+	& * {
+		color: #fff !important;
+	}
+}
