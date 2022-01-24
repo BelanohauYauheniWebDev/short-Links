@@ -44,7 +44,7 @@ const Modal = ({ open, handleClose, title, children }: IModal) => {
 						animate="opened"
 						exit={"closed"}
 						variants={overlayVariants}
-						transition={{ duration: 0.2 }}
+						transition={{ duration: 0.4 }}
 					/>
 					<motion.div
 						className={s.modal}
@@ -52,7 +52,7 @@ const Modal = ({ open, handleClose, title, children }: IModal) => {
 						animate="opened"
 						variants={modalVariants}
 						exit={"closed"}
-						transition={{ duration: 0.2 }}
+						transition={{ duration: 0.4 }}
 					>
 						{title && (
 							<header>

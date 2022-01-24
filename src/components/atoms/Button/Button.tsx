@@ -10,6 +10,7 @@ interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
 	type?: "submit" | "reset" | "button" | undefined;
 	children?: ReactNode;
 	variant?: string;
+	disabled?: boolean;
 }
 
 const Button = ({
@@ -18,10 +19,16 @@ const Button = ({
 	type = "button",
 	variant = "",
 	children,
+	disabled,
 }: IButton) => {
-	const myClass = cn(s.button, s[size], s[variant]);
+	const myClass = cn(disabled && s.disabled, s.button, s[size], s[variant]);
 	return (
-		<button onClick={onClick} type={type} className={myClass}>
+		<button
+			disabled={disabled}
+			onClick={onClick}
+			type={type}
+			className={myClass}
+		>
 			{children}
 		</button>
 	);
