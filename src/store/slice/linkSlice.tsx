@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { API_BASE_URL } from "../../config";
 
-interface IResult {
+export interface IResult {
 	code: string;
 	short_link: string;
 	full_short_link: string;
