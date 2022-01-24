@@ -4,6 +4,7 @@
 	padding-left: 1rem;
 	padding-right: 1rem;
 	.form {
+		position: relative;
 		display: flex;
 		border-radius: var(--radii-sm);
 		padding: 2.5rem 2rem;
@@ -23,7 +24,7 @@
 			border: none;
 			font-size: 1.25rem;
 			@media (max-width: 1024px) {
-				padding: 0.5rem 0;
+				padding: 0.5rem;
 				line-height: 0;
 			}
 		}
@@ -38,4 +39,14 @@
 			flex-direction: column;
 		}
 	}
+}
+
+.error {
+	position: absolute;
+	left: 2rem;
+	bottom: 0.5rem;
+
+	color: var(--secondary-300);
+	font-size: 14px;
+	font-style: italic;
 }
